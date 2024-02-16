@@ -1,0 +1,35 @@
+{
+    "name": "GitCSVs",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "HttpServer1",
+            "type": "LinkedServiceReference",
+            "parameters": {
+                "urlcsv": {
+                    "value": "@dataset().url",
+                    "type": "Expression"
+                }
+            }
+        },
+        "parameters": {
+            "url": {
+                "type": "string"
+            }
+        },
+        "folder": {
+            "name": "olympic"
+        },
+        "annotations": [],
+        "type": "DelimitedText",
+        "typeProperties": {
+            "location": {
+                "type": "HttpServerLocation"
+            },
+            "columnDelimiter": ",",
+            "escapeChar": "\\",
+            "firstRowAsHeader": true,
+            "quoteChar": "\""
+        },
+        "schema": []
+    }
+}

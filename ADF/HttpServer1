@@ -1,0 +1,17 @@
+{
+    "name": "HttpServer1",
+    "properties": {
+        "parameters": {
+            "urlcsv": {
+                "type": "string"
+            }
+        },
+        "annotations": [],
+        "type": "HttpServer",
+        "typeProperties": {
+            "url": "@{linkedService().urlcsv}",
+            "enableServerCertificateValidation": true,
+            "authenticationType": "Anonymous"
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "name": "ExcelMetadata",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "AzureDataLakeStorage1",
+            "type": "LinkedServiceReference"
+        },
+        "folder": {
+            "name": "olympic"
+        },
+        "annotations": [],
+        "type": "Excel",
+        "typeProperties": {
+            "sheetName": "Tabelle1",
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "fileName": "metadata.xlsx",
+                "folderPath": "metadata",
+                "fileSystem": "olympic"
+            },
+            "firstRowAsHeader": true
+        },
+        "schema": [
+            {
+                "name": "name",
+                "type": "String"
+            },
+            {
+                "name": "url",
+                "type": "String"
+            }
+        ]
+    }
+}
